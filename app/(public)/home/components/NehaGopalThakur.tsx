@@ -1,5 +1,16 @@
 "use client";
 
+const personalInfo = { 
+    mail : "neha@tallento.ai",
+    instagram : "https://www.instagram.com/neha_gopal_thakur",
+    linkedin : "https://www.linkedin.com/in/neha-gopal-thakur-73428b1b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    facebook :"https://www.facebook.com/neha.thakur.9210256",
+    youtube : "",
+    twitter : "",
+    threads : ""
+    
+}
+
 import React from "react";
 import { motion, useScroll, useSpring, Variants, cubicBezier } from "framer-motion";
 import {
@@ -7,6 +18,7 @@ import {
   Linkedin,
   Instagram,
   Mail,
+  Facebook,
   Sparkles,
   Mic2,
   Users2,
@@ -70,8 +82,8 @@ const PillStat: React.FC<{
   value: string;
   note?: string;
 }> = ({ label, value, note }) => (
-  <div className="flex flex-col gap-1 rounded-2xl border border-slate-700/70 bg-slate-900/80 px-4 py-3">
-    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+  <div className="flex flex-col gap-1 rounded-2xl border border-slate-700/70 bg-slate-900/80 px-2 py-3">
+    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
       {label}
     </p>
     <p className="text-lg font-semibold text-slate-50">{value}</p>
@@ -203,7 +215,7 @@ const NehaGopalThakurPage: React.FC = () => {
 
           <div className="flex items-center gap-3">
             <a
-              href="mailto:neha@tallento.ai"
+              href={`mailto:${personalInfo?.mail}`}
               className="hidden sm:inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/80 px-4 py-1.5 text-xs font-medium text-slate-200 hover:border-pink-400/80 hover:text-pink-50"
             >
               <Mail className="h-3.5 w-3.5" />
@@ -217,25 +229,32 @@ const NehaGopalThakurPage: React.FC = () => {
       <div className="fixed right-4 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex">
         <span className="h-10 w-px bg-gradient-to-b from-pink-500/60 via-slate-500/40 to-cyan-400/60" />
         <a
-          href="mailto:neha@tallento.ai"
+          href={`mailto:${personalInfo?.mail}`}
           className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/90 text-slate-300 hover:border-pink-400/80 hover:text-pink-200 transition-colors"
           aria-label="Email Neha"
         >
           <Mail className="h-4 w-4" />
         </a>
         <a
-          href="#"
+          href={`${personalInfo?.linkedin}`}
           className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/90 text-slate-300 hover:border-pink-400/80 hover:text-pink-200 transition-colors"
           aria-label="Neha on LinkedIn"
         >
           <Linkedin className="h-4 w-4" />
         </a>
         <a
-          href="#"
+          href={`${personalInfo?.facebook}`}
           className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/90 text-slate-300 hover:border-pink-400/80 hover:text-pink-200 transition-colors"
-          aria-label="Neha on Instagram"
+          aria-label="Email Neha"
         >
-          <Instagram className="h-4 w-4" />
+          <Mail className="h-4 w-4" />
+        </a>
+        <a
+          href={`${personalInfo?.instagram}`}
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/90 text-slate-300 hover:border-pink-400/80 hover:text-pink-200 transition-colors"
+          aria-label="Neha on Facebook"
+        >
+          <Facebook className="h-4 w-4" />
         </a>
         <button
           type="button"
@@ -569,7 +588,7 @@ const NehaGopalThakurPage: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 mt-2">
+                <div className="grid grid-cols-2  gap-2 mt-2">
                   <PillStat label="Open Mandates" value="148" note="across IIT-JEE, NEET, K-12 & IT" />
                   <PillStat label="Join Probability" value="78%" note="based on RTJ & pipeline" />
                 </div>
@@ -692,21 +711,21 @@ const NehaGopalThakurPage: React.FC = () => {
                 </p>
                 <div className="flex flex-col gap-2">
                   <a
-                    href="mailto:neha@tallento.ai"
+                    href={`${personalInfo?.mail}`}
                     className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-950/80 px-4 py-2 text-xs font-medium text-slate-200 hover:border-pink-400/80 hover:text-pink-50"
                   >
                     <Mail className="h-4 w-4" />
-                    <span>Email: neha@tallento.ai</span>
+                    <span>Email: {personalInfo?.mail}</span>
                   </a>
                   <a
-                    href="#"
+                    href={`${personalInfo?.linkedin}`}
                     className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-950/80 px-4 py-2 text-xs font-medium text-slate-200 hover:border-pink-400/80 hover:text-pink-50"
                   >
                     <Linkedin className="h-4 w-4" />
                     <span>Connect on LinkedIn</span>
                   </a>
                   <a
-                    href="#"
+                    href={`${personalInfo?.instagram}`}
                     className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-950/80 px-4 py-2 text-xs font-medium text-slate-200 hover:border-pink-400/80 hover:text-pink-50"
                   >
                     <Instagram className="h-4 w-4" />
