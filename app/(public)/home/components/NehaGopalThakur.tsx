@@ -161,7 +161,7 @@ const NehaGopalThakurPage: React.FC = () => {
 
       {/* Top navigation */}
       <header className="border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-xl sticky top-0 z-20">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3">
             <motion.div
             className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-tr from-pink-500 via-orange-400 to-amber-300 text-slate-950 font-bold shadow-[0_0_35px_rgba(248,113,113,0.9)]"
@@ -328,13 +328,13 @@ const NehaGopalThakurPage: React.FC = () => {
           {/* Right side: holographic profile */}
           <div className="relative flex items-center justify-center">
             <motion.div
-              className="relative h-64 w-64 sm:h-72 sm:w-72 rounded-[32px] border border-slate-700/80 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 shadow-[0_0_80px_rgba(15,23,42,1)]"
+              className="relative w-full h-96 lg:w-80 rounded-[32px] border border-slate-700/80 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 shadow-[0_0_80px_rgba(15,23,42,1)]"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6, boxShadow: "0 0 90px rgba(248,113,113,0.9)" }}
             >
-              <div className="absolute inset-px rounded-[28px] bg-[radial-gradient(circle_at_top,_rgba(248,113,113,0.18),_transparent_55%),_radial-gradient(circle_at_bottom,_rgba(56,189,248,0.16),_transparent_55%)]" />
+              <div className="absolute inset-px  rounded-[28px] bg-[radial-gradient(circle_at_top,_rgba(248,113,113,0.18),_transparent_55%),_radial-gradient(circle_at_bottom,_rgba(56,189,248,0.16),_transparent_55%)]" />
 
               <div className="relative flex h-full flex-col justify-between p-4 sm:p-5">
                 <div className="flex items-center justify-between">
